@@ -1,12 +1,12 @@
 pipeline {
     agent any
     tools {
-       maven "M2_HOME"
+       maven "MAVEN_LOCAL"
     }
     stages {
         stage ('Initialize') {
             steps {
-                bat 'echo "M2_HOME = ${MAVEN_LOCAL}"' 
+                bat 'echo "MAVEN_LOCAL = ${MAVEN_LOCAL}"' 
             }
         }
         stege ('Just Test') {
