@@ -9,8 +9,6 @@ pipeline {
                 bat 'echo "M2_HOME = ${MAVEN_LOCAL}"' 
             }
         }
-    }
-    stages {
         stege ('Just Test') {
            steps {
                 bat 'mvn clean package -DskipTestes=true'
