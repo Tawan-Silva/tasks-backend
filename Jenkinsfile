@@ -2,7 +2,9 @@ pipeline {
     agent any
     stages {
         stege ('Just Test') {
-            bat 'echo test jenkins!'
+           steps {
+                bat 'echo test jenkins!'
+            }
         }
     }
 }
