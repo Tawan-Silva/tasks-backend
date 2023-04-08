@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
-                bat 'echo "MAVEN_LOCAL = mvn --version' 
+                bat 'mvn --version' 
             }
         }
         stage ('Just Test') {
@@ -15,6 +15,11 @@ pipeline {
             }
         }
         stage ('Unit Test') {
+           steps {
+                bat 'mvn test'
+            }
+        }
+         stage ('Sonar Test') {
            steps {
                 bat 'mvn test'
             }
