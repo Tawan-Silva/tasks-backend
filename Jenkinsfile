@@ -6,9 +6,7 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
-                bat '''
-                    echo "M2_HOME = ${MAVEN_LOCAL}"
-                ''' 
+                bat 'echo "M2_HOME = ${MAVEN_LOCAL}"' 
             }
         }
     stages {
