@@ -1,9 +1,20 @@
 pipeline {
     agent any
+    tools {
+       maven "M2_HOME"
+    }
+    stages {
+        stage ('Initialize') {
+            steps {
+                bat '''
+                    echo "M2_HOME = ${MAVEN_LOCAL}"
+                ''' 
+            }
+        }
     stages {
         stege ('Just Test') {
            steps {
-                bat 'echo test jenkins!'
+                bat 'mvn clean package -DskipTestes=true'
             }
         }
     }
