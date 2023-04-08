@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
-                bat 'echo "MAVEN_LOCAL = ${MAVEN_LOCAL}' 
+                bat 'echo "MAVEN_LOCAL = ${MAVEN_HOME}' 
             }
         }
         stage ('Just Test') {
