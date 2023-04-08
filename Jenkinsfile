@@ -9,7 +9,7 @@ pipeline {
                 sh 'echo "MAVEN_LOCAL = ${MAVEN_LOCAL}"' 
             }
         }
-        stege ('Just Test') {
+        stage ('Just Test') {
            steps {
                 sh 'mvn clean package -DskipTestes=true'
             }
